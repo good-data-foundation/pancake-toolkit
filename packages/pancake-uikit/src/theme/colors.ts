@@ -2,11 +2,14 @@ import { Colors } from "./types";
 
 export const baseColors = {
   failure: "#ED4B9E",
-  primary: "#1FC7D4",
+  primary: "#428EFF", // #1FC7D4
   primaryBright: "#53DEE9",
   primaryDark: "#0098A1",
-  secondary: "#7645D9",
-  success: "#31D0AA",
+  primaryMenu: "#031197",
+  secondary: "#4C5966", // "#7645D9",
+  // third: "#4C5966",
+  success: "#428EFF",  // "#31D0AA",
+  title: "#FFFFFF",
   warning: "#FFB237",
 };
 
@@ -20,18 +23,20 @@ export const lightColors: Colors = {
   ...additionalColors,
   background: "#FAF9FA",
   backgroundDisabled: "#E9EAEB",
-  backgroundAlt: "#FFFFFF",
+  backgroundTopbar: "#031197", // for top bar background color setting
+  backgroundAlt: "#FFFFFF", // #031197
   cardBorder: "#E7E3EB",
   contrast: "#191326",
   dropdown: "#F6F6F6",
   dropdownDeep: "#EEEEEE",
   invertedContrast: "#FFFFFF",
-  input: "#eeeaf4",
+  input: "#E6E6E6", // "#eeeaf4",
   inputSecondary: "#d7caec",
-  tertiary: "#EFF4F5",
-  text: "#280D5F",
+  tertiary: "#428EFF", // "#EFF4F5",
+  text: "#212326", // "#280D5F",
   textDisabled: "#BDC2C4",
-  textSubtle: "#7A6EAA",
+  textSubtle: "#031197", // "#7A6EAA",
+  textTitle: "#AAAAAA",
   disabled: "#E9EAEB",
   gradients: {
     bubblegum: "linear-gradient(139.73deg, #E5FDFF 0%, #F3EFFF 100%)",
@@ -50,6 +55,7 @@ export const darkColors: Colors = {
   secondary: "#9A6AFF",
   background: "#08060B",
   backgroundDisabled: "#3c3742",
+  backgroundTopbar: "#031197",
   backgroundAlt: "#27262c",
   cardBorder: "#383241",
   contrast: "#FFFFFF",
@@ -63,6 +69,7 @@ export const darkColors: Colors = {
   text: "#F4EEFF",
   textDisabled: "#666171",
   textSubtle: "#B8ADD2",
+  textTitle: "#AAAAAA",
   disabled: "#524B63",
   gradients: {
     bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",

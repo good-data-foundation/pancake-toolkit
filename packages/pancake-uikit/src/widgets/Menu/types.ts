@@ -20,6 +20,10 @@ export interface PushedProps {
   pushNav: (isPushed: boolean) => void;
 }
 
+export interface TopbarTheme {
+  background: string;
+}
+
 export interface NavTheme {
   background: string;
 }
@@ -61,4 +65,5 @@ export interface NavProps extends PanelProps {
   login: Login;
   profile?: Profile;
   logout: () => void;
+  infoLink?: string;
 }

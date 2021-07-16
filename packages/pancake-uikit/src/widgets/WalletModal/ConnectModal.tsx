@@ -31,7 +31,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
       />
     ))}
     <HelpLink
-      href="https://docs.pancakeswap.finance/guides/faq#how-do-i-set-up-my-wallet-on-binance-smart-chain"
+      href="https://docs.goodata.io/docs/Tutorials/Wallet/Setup_Networks"
       external
     >
       <HelpIcon color="primary" mr="6px" />

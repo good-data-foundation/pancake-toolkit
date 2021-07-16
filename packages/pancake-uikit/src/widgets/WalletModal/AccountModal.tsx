@@ -9,11 +9,12 @@ import { connectorLocalStorageKey } from "./config";
 
 interface Props {
   account: string;
+  infoLink: string;
   logout: () => void;
   onDismiss?: () => void;
 }
 
-const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null }) => (
+const AccountModal: React.FC<Props> = ({ account, infoLink, logout, onDismiss = () => null }) => (
   <Modal title="Your wallet" onDismiss={onDismiss}>
     <Text
       fontSize="20px"
@@ -23,15 +24,15 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
       {account}
     </Text>
     <Flex mb="32px">
-      <LinkExternal small href={`https://bscscan.com/address/${account}`} mr="16px">
-        View on BscScan
+      <LinkExternal small href={`${infoLink}/address/${account}`} mr="16px">
+        View on Heco Chain
       </LinkExternal>
       <CopyToClipboard toCopy={account}>Copy Address</CopyToClipboard>
     </Flex>
     <Flex justifyContent="center">
       <Button
         scale="sm"
-        variant="secondary"
+        variant="trans"
         onClick={() => {
           logout();
           window.localStorage.removeItem(connectorLocalStorageKey);

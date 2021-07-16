@@ -28,7 +28,7 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   padding-right: 16px;
   width: 100%;
   height: ${MENU_HEIGHT}px;
-  background-color: ${({ theme }) => theme.nav.background};
+  background-color: ${({ theme }) => theme.topbar.background};
   border-bottom: solid 2px rgba(133, 133, 133, 0.1);
   z-index: 20;
   transform: translate3d(0, 0, 0);
@@ -74,6 +74,7 @@ const Menu: React.FC<NavProps> = ({
   links,
   profile,
   children,
+  infoLink,
 }) => {
   const { isXl } = useMatchBreakpoints();
   const isMobile = isXl === false;
@@ -123,8 +124,8 @@ const Menu: React.FC<NavProps> = ({
           href={homeLink?.href ?? "/"}
         />
         <Flex>
-          <UserBlock account={account} login={login} logout={logout} />
-          {profile && <Avatar profile={profile} />}
+          <UserBlock account={account} login={login} logout={logout} infoLink={infoLink}/>
+          {/*profile && <Avatar profile={profile} /> */}
         </Flex>
       </StyledNav>
       <BodyWrapper>

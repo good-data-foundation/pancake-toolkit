@@ -7,17 +7,18 @@ interface Props {
   account?: string;
   login: Login;
   logout: () => void;
+  infoLink?: string;
 }
 
-const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
-  const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
+const UserBlock: React.FC<Props> = ({ account, login, logout, infoLink }) => {
+  const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account, infoLink);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
   return (
     <div>
       {account ? (
         <Button
           scale="sm"
-          variant="tertiary"
+          variant="wallet"
           onClick={() => {
             onPresentAccountModal();
           }}
@@ -27,11 +28,12 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
       ) : (
         <Button
           scale="sm"
+          variant="wallet"
           onClick={() => {
             onPresentConnectModal();
           }}
         >
-          Connect
+          Connect Wallet
         </Button>
       )}
     </div>

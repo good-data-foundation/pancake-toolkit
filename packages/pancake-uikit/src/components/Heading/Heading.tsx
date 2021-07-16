@@ -4,21 +4,26 @@ import { tags, scales, HeadingProps } from "./types";
 
 const style = {
   [scales.MD]: {
-    fontSize: "20px",
-    fontSizeLg: "20px",
+    fontSize: "18px",
+    fontSizeLg: "18px",
   },
   [scales.LG]: {
     fontSize: "24px",
     fontSizeLg: "24px",
   },
   [scales.XL]: {
-    fontSize: "32px",
-    fontSizeLg: "40px",
+    fontSize: "28px",
+    fontSizeLg: "32px",
   },
   [scales.XXL]: {
+    fontSize: "32px",
+    fontSizeLg: "36px",
+  },
+  [scales.XXXL]: {
     fontSize: "48px",
     fontSizeLg: "64px",
   },
+
 };
 
 const Heading = styled(Text).attrs({ bold: true })<HeadingProps>`

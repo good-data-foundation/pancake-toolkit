@@ -37,7 +37,7 @@ export const styleVariants = {
     color: "primary",
   },
   [variants.SUBTLE]: {
-    backgroundColor: "textSubtle",
+    backgroundColor: "tertiary",
     color: "backgroundAlt",
   },
   [variants.DANGER]: {
@@ -50,7 +50,28 @@ export const styleVariants = {
   },
   [variants.TEXT]: {
     backgroundColor: "transparent",
-    color: "primary",
+    color: "primaryMenu",
     boxShadow: "none",
+  },
+  [variants.TRANS]: {
+    backgroundColor: "transparent",
+    border: "2px solid",
+    borderColor: "primaryMenu",
+    color: "primaryMenu",
+    boxShadow: "none",
+  },
+  [variants.BOXER]: {
+    backgroundColor: "primaryMenu",
+    border: "2px solid",
+    borderColor: "primaryMenu",
+    boxShadow: "none",
+    color: "white",
+    ":disabled": {
+      backgroundColor: "transparent",
+    },
+  },
+  [variants.WALLET]: {
+    backgroundColor: "white",
+    color: "primary",
   },
 };
